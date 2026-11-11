@@ -1,0 +1,69 @@
+#about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+    width: 100%;
+    border-top: 1px solid #1c1c1c;
+    padding-top: 1rem;
+}
+
+#about-me > .text-about-me {
+    border-left: 2px solid #db781c;
+    padding-left: 2rem;
+}
+
+#about-me > .text-about-me > p {
+    font-size: 1rem;
+    color: #fff;
+    letter-spacing: .5px;
+    line-height: 1.7;
+}
+
+/* Botão */
+#about-me > .container-btn-about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#about-me > .container-btn-about-me > a > .btn-about-me {
+    width: 150px;
+    height: 40px;
+    padding: 4px 8px;
+    border: 1px solid #db781c;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    background: transparent;
+    transition: all .5s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #df9651;
+        border-radius: 16px;
+        color: #000;
+    }
+}
+
+@media (min-width: 768px) {
+    #about-me {
+        height: 400px;
+        padding-top: 2rem;
+    }
+
+    #about-me > .text-about-me {
+        width: 100%;
+    }
+
+    #about-me > .text-about-me > p {
+        max-width: 700px;
+    }
+
+    /* Botão */
+    #about-me > .container-btn-about-me {
+        justify-content: start;
+        width: 100%;
+    }
+}

@@ -1,0 +1,177 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 5px 1rem;
+    width: 100%;
+    height: 70px;
+    backdrop-filter: blur(5px);
+    background-color: #00000049;
+    border-bottom: 1px solid #1c1c1c;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Progresso */
+header > .container-progress {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+
+    .progress {
+        width: 0;
+        height: 4px;
+        background-color: #db781c;
+        border-radius: 0 8px 8px 0;
+    }
+}
+
+header > h1 > a {
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+/* Menu desktop */
+header > #nav-item-desktop,
+#btn-desktop {
+    display: none;
+}
+
+/* Menu mobile */
+header > #nav-item-mobile {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 0 20px;
+    width: 100%;
+}
+header > #nav-item-mobile.open-menu-mobile {
+    display: block;
+}
+
+header > #nav-item-mobile > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px;
+
+    li {
+        padding: 11px 8px;
+        border-radius: inherit;
+        transition: all .3s ease;
+        cursor: pointer;
+
+        a {
+            color: #000;
+            font-size: 1rem;
+        }
+    }
+
+    li.active {
+        background-color: #db781c;
+        font-weight: 600;
+    }
+
+    li:hover:not(.active) {
+        background-color: #eec8a5;
+    }
+}
+
+/* Botão para mobile */
+header > #btn-menu-mobile {
+    width: 48px;
+    height: 40px;
+    padding: 4px;
+    border: none;
+    border-radius: 4px;
+    background-color: #db781c;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:active {
+        transform: scale(.95);
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        padding: 10px 5rem;
+    }
+
+    /* Progresso */
+    header > .container-progress {
+        display: none;
+    }
+
+    /* Menu mobile */
+    header > #nav-item-mobile,
+    header > #btn-menu-mobile {
+        display: none;
+    }
+
+    /* Menu desktop */
+    header > #nav-item-desktop {
+        display: block;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            width: 100%;
+
+            li {
+                padding: 5px;
+            }
+
+            li > a {
+                color: #fff;
+                font-size: 14px;
+            }
+
+            li.active {
+                border-bottom: 1px solid #db781c;
+            }
+
+            li.active > a {
+                color: #db781c;
+                font-weight: 600;
+            }
+
+            li:hover:not(.active) > a {
+                color: #e2a76f;
+            }
+
+        }
+    }
+
+    /* Botão de desktop */
+    #btn-desktop {
+        display: block;
+        width: 100px;
+        height: 35px;
+        padding: 4px 8px;
+        border: none;
+        border-radius: 8px;
+        background-color: #db781c;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all .3s ease;
+
+        &:hover {
+            background-color: #e2a770;
+        }
+    } 
+}

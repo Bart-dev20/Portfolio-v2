@@ -1,0 +1,122 @@
+#footer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    width: 100%;
+    padding: 20px;
+    border-top: 1px solid #1c1c1c;
+    margin-top: 5rem;
+}
+
+#footer > .container-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.titles-footer {
+    color: #db781c;
+    font-size: 1.4rem;
+}
+
+/* Área de contatos */
+#footer > .container-footer > .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .container-contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .box-contacts {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #fff;
+
+            .icons {
+                width: 35px;
+                height: 35px;
+                background-color: #fff;
+                border-radius: 50%;
+                padding: 5px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+/* Área de links */
+#footer > .container-footer > .links-rapidos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    nav > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav > ul > li {
+        width: fit-content;
+        height: 23px;
+        transition: all .3s ease;
+
+        &:hover {
+            border-bottom: 1px solid #db781c;
+        }
+
+        &:hover > a {
+            color: #db781c;
+        }
+    }
+
+    nav > ul > li > a {
+        color: #fff;
+    }
+}
+
+
+/* Copy right */
+#footer > .copyRight {
+    width: 100%;
+    text-align: center;
+    color: #464646;
+    font-size: 14px;
+    padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+    #footer {
+        flex-direction: column;
+        padding: 30px 5rem 30px;
+    }
+
+    #footer > .container-footer {
+        flex-direction: row;
+        justify-content: space-between;
+
+        width: 100%;
+    }
+
+    /* Área de contatos */
+    #footer > .container-footer > .contacts {
+        width: 400px;
+        padding: 0 5rem;
+        border-left: 1px solid #1c1c1c38;
+        border-right: 1px solid #1c1c1c38;
+    }
+
+    /* Copy right */
+    #footer > .copyRight {
+        text-align: start;
+    }
+}

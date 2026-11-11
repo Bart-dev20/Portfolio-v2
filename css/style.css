@@ -1,0 +1,59 @@
+@import url('./header.css');
+@import url('./home.css');
+@import url('./about-me.css');
+@import url('./stacks.css');
+@import url('./projects.css');
+@import url('./footer.css');
+
+@font-face {
+    font-family: 'minhaFont';
+    src: url('../font/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'minhaFont', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+.titles {
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.titles > a {
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+span {
+    color: #db781c;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 3rem 1rem;
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 3rem 5rem;
+    }
+}

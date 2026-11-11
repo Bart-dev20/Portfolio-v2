@@ -1,0 +1,96 @@
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+    padding-top: 1rem;
+    width: 100%;
+    border-top: 1px solid #1c1c1c;
+}
+
+#projects > .container-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px 20px;
+}
+
+#projects > .container-cards > .card {
+    border: 1px solid #1c1c1c;
+    border-radius: 16px;
+    width: 330px;
+    height: auto;
+    overflow: hidden;
+    box-shadow: 0 0 12px rgba(219, 120, 28, .2);
+
+    .project-image {
+        width: 100%;
+        height: 200px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    /* Área de informação do projeto */
+    .project-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        padding: 16px;
+
+        /* Nome do projeto */
+        .nome-project {
+            color: #fff;
+        }
+
+        .container-selos {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            .selo {
+                color: #fff;
+                font-size: 12px;
+                border: 1px solid #db781c;
+                padding: 4px 10px;
+                border-radius: 16px;
+                backdrop-filter: blur(8px);
+                background-color: #db781c33;
+            }
+        }
+
+        /* Botão de ver projeto */
+        a {
+            width: fit-content;
+
+            .btn-ver-projeto {
+                width: 120px;
+                background-color: #db781c;
+                font-weight: 600;
+                padding: 10px;
+                border: none;
+                border-radius: 16px;
+                cursor: pointer;
+                transition: transform .5s ease;
+
+                &:hover {
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #projects  {
+        gap: 80px;
+        padding-top: 2rem;
+    }
+}

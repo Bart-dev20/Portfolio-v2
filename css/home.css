@@ -1,0 +1,186 @@
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+#home > .container-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    padding: 3rem 1rem;
+    width: 100%;
+    height: auto;
+    border: 1px solid #1c1c1c;
+    border-radius: 16px;
+}
+
+#home > .container-home > .imagem {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #db781c;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+#home > .container-home > .informations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#home > .container-home > .informations > small {
+    display: none;
+}
+
+/* Nome do programador */
+#home > .container-home > .informations > #nome-dev {
+    text-align: center;
+    color: #db781c;
+    font-weight: 800;
+}
+
+/* Informações */
+#home > .container-home > .informations > p {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: .5px;
+    line-height: 1.7;
+}
+
+/* Área de botões */
+#home > .container-home > .informations > .container-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+#home > .container-home > .informations > .container-btns > a > .btn-whatsapp,
+#home > .container-home > .informations > .container-btns > a > .btn-something {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    width: fit-content;
+    height: 40px;
+    border: 1px solid #db781c;
+    background-color: #db781c;
+    border-radius: 8px;
+    padding: 4px 16px;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .5s ease;
+
+    &:hover {
+        background-color: #df9651;
+        border-radius: 16px;
+    }
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+#home > .container-home > .informations > .container-btns > a > .btn-something {
+    background-color: transparent;
+    color: #fff;
+
+    &:hover {
+        background-color: #df9651;
+        border-radius: 16px;
+        color: #000;
+    }
+}
+
+@media (min-width: 768px) {
+    #home {
+        min-height: calc(100vh - 70px);
+    }
+    #home > .container-home {
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 100px;
+
+        padding-top: 0;
+        border: none;
+    }
+
+    #home > .container-home > .imagem {
+        width: 350px;
+        height: 350px;
+        border-radius: 32px;
+    }
+
+    #home > .container-home > .informations {
+        align-items: start;
+        gap: 20px;
+        width: 550px;
+    }
+
+    #home > .container-home > .informations > small {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #db781c;
+        position: relative;
+        border: 1px solid #db781c;
+        border-radius: 16px;
+        backdrop-filter: blur(8px);
+        background-color: #db781c31;
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+
+    /* Nome do programador */
+    #home > .container-home > .informations > #nome-dev {
+        text-align: start;
+    }
+
+    #home > .container-home > .informations > h2 {
+        color: #db781c;
+        font-weight: 800;
+        font-size: 4rem;
+    }
+
+    #home > .container-home > .informations > p {
+        text-align: start;
+        width: 400px;
+    }
+
+    /* Área de botões */
+    #home > .container-home > .informations > .container-btns {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #home > .container-home > .informations > .container-btns > a > .btn-whatsapp,
+    #home > .container-home > .informations > .container-btns > a > .btn-something {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+}
